@@ -129,18 +129,4 @@ public class Plan {
 	@UpdateTimestamp
 	private LocalDate upadateDate;
 
-	public Integer getPlanId() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public void setActiveSw(String status) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	
-	
-	
-
 }

@@ -37,7 +37,7 @@ public class PlanServiceImpl implements PlanService {
 	public boolean savePlan(Plan plan) {
 
 		Plan saved = planRepo.save(plan);
-		return saved.getPlanId() != null ? true : false;
+		return saved.getPlanEndDate() != null ? true : false;
 	}
 
 	@Override
@@ -56,7 +56,7 @@ public class PlanServiceImpl implements PlanService {
 	@Override
 	public boolean updatePlan(Plan plan) {
 		Plan save = planRepo.save(plan);
-		return plan.getPlanId() != null;
+		return plan.getPlanEndDate() != null;
 	}
 
 	@Override
@@ -76,7 +76,7 @@ public class PlanServiceImpl implements PlanService {
 		Optional<Plan> byId = planRepo.findById(planId);
 		if (byId.isPresent()) {
 			Plan plan = byId.get();	
-			plan.setActiveSw(status);
+			plan.setActivesw(status);
 			planRepo.save(plan);
 			return true;
 			}
